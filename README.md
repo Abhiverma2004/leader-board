@@ -122,3 +122,77 @@ This submission includes the following bonus features:
 https://drive.google.com/file/d/1Gkve0JXkX4cq0LWUs5DKuoHM-6v3OqfQ/view?usp=sharing
 https://drive.google.com/file/d/1neyssSTayL1L2hWX1vEJy6vUavY-45R-/view?usp=sharing
 https://drive.google.com/file/d/1lST52QLeetlNa6bceoWjmuliWCy00A-E/view?usp=sharing
+
+How to Clone and Run the Leader-Board Project
+🔗 GitHub Repo:
+👉 https://github.com/Abhiverma2004/leader-board
+
+🚀 Prerequisites
+Make sure you have the following installed:
+
+Node.js (v18 or later)
+
+npm or yarn
+
+MongoDB (running locally or cloud URI like MongoDB Atlas)
+
+📥 Step-by-Step Installation
+1️⃣ Clone the Repository
+bash
+Copy
+Edit
+git clone https://github.com/Abhiverma2004/leader-board.git
+cd leader-board
+2️⃣ Set Up the Backend
+bash
+Copy
+Edit
+cd backend
+npm install
+Create a .env file inside the backend directory:
+ini
+Copy
+Edit
+MONGO_URI=your_mongodb_connection_string
+PORT=5000
+Replace your_mongodb_connection_string with your local or MongoDB Atlas URI.
+
+Run the backend server:
+bash
+Copy
+Edit
+npm start
+Server will be running on:
+📍 http://localhost:5000
+
+3️⃣ Set Up the Frontend
+bash
+Copy
+Edit
+cd ../frontend
+npm install
+npm start
+The React app will be available at:
+📍 http://localhost:3000
+
+📡 API Endpoints (Backend)
+Method	Endpoint	Description
+GET	/api/users	Get all users
+POST	/api/users	Add a new user
+POST	/api/claim	Claim random points for a user
+GET	/api/leaderboard	Get leaderboard data
+GET	/api/history	Get all claim history
+
+🗃️ Database Collections
+users
+_id, name, totalPoints
+
+claimhistories
+_id, userId, pointsClaimed, timestamp
+
+🎁 Bonus Features
+✅ Responsive UI
+✅ Random point claiming
+✅ Real-time leaderboard updates
+✅ Paginated claim history
+✅ Clean code with comments
